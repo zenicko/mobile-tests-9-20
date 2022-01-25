@@ -36,19 +36,27 @@ Create classes `TestBase`,`AndroidTests` and `BrowserStackMobileDriver`.
 5. Check a code language. Change the default language and check code language. 
 (parametrs: code language, field.text `localized_language_name` 
 and field.text `language_subtitle`)
+
    Step 1. Click on search field:
+
       1. resource-id	org.wikipedia.alpha:id/preference_languages_filter
+
       2. class	android.widget.EditText
+   
    Step 2. Send text: `Russian`
+   
    Step 3. Check exist fields:
       1. resource-id	org.wikipedia.alpha:id/localized_language_name
          1. text	`Русский`
       2. resource-id	org.wikipedia.alpha:id/language_subtitle
          1. text	`Russian`
+   
    Step 4. Choose the language of `Russian`.
+   
    Step 5. Check a short name in the language panel. Must be `RU`   
 6. Hide sensitive data by `Owner` and URLs
-   1. Created the file `app.properties` with properties: 
+
+6.1. Created the file `app.properties` with properties: 
 ```
    browserstack.user=Add username on BrowserStack
    browserstack.key=Add password on BrowserStack
@@ -58,7 +66,8 @@ and field.text `language_subtitle`)
    browserstack.url=http://hub.browserstack.com/wd/hub
    browserstack.url.statSession=https://api-cloud.browserstack.com/app-automate/sessions/
 ```
-   2. Created the file `local.properties` with properties (default): 
+6.2. Created the file `local.properties` with properties (default): 
+
 ```
    device=Google Pixel 3
    os_version=9.0
@@ -68,9 +77,9 @@ and field.text `language_subtitle`)
    name=first_test
 ```
 
-7.* Create job in Jenkins
+7.* Create a job in Jenkins
 
-8.* Import to Allute TestOps
+8.* Import to Allure TestOps
 
 ## What's new?
 ___

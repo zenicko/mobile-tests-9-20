@@ -19,7 +19,9 @@ import static io.qameta.allure.Allure.step;
 public class AndroidTests extends TestBase {
 
     @Test
-    @DisplayName("Check search text")
+    @Feature("Feature: search")
+    @Story("Story: give a list of searching results")
+    @DisplayName("Check searching result")
     void searchText() {
         $(MobileBy.AccessibilityId("Search Wikipedia")).click();
         $(MobileBy.id("org.wikipedia.alpha:id/search_src_text")).sendKeys("BrowserStack");
@@ -27,6 +29,8 @@ public class AndroidTests extends TestBase {
     }
 
     @Test
+    @Feature("Feature: search")
+    @Story("Story: what a default language is set")
     @DisplayName("Check default language (EN)")
     void defaultLanguageIsEn() {
         $(MobileBy.AccessibilityId("Search Wikipedia")).click();
@@ -37,7 +41,6 @@ public class AndroidTests extends TestBase {
     @CsvSource(value = {"RU:Русский:Russian"}, delimiter = ':')
     @Feature("Feature: Language panel")
     @Story("Story: Can choose a language")
-    @DisplayName("DisplayName: Change a default language and check the code language")
     @Description("Description: It's the test description \"Change a language and check the code language\"")
     void CanChangelanguageParametrizedTest(String codeLanguage,
                                            String localizedLanguageName,
