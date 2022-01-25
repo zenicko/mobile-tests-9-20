@@ -1,6 +1,9 @@
 .idea/
 .gradle/
 build/
+.allure/
+
+src/test/resources/config/browserstack/app.properties
 
 gradlew
 gradlew.bat

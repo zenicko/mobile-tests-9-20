@@ -4,6 +4,7 @@ plugins {
 }
 
 def allureVersion = "2.17.2",
+    restAssuredVersion = "4.4.0",
     junitVersion = "5.8.2",
     selenideVersion = "5.25.1",
     appiumVersion = "7.6.0"
@@ -27,15 +28,14 @@ dependencies {
             "com.codeborne:selenide:$selenideVersion",
             "org.junit.jupiter:junit-jupiter:$junitVersion",
             "io.appium:java-client:$appiumVersion",
-
+            "io.rest-assured:rest-assured:$restAssuredVersion",
+            "org.aeonbits.owner:owner:1.0.12",
     )
 
     testRuntimeOnly(
             "org.junit.jupiter:junit-jupiter-engine:$junitVersion",
             "org.slf4j:slf4j-simple:1.7.32"
-
     )
-
 }
 
 test {
