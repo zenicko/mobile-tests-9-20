@@ -1,4 +1,4 @@
-package ru.zenicko.wikipedia.tests;
+package ru.zenicko.wikipedia.tests.sample;
 
 import java.net.URL;
 import java.util.List;
@@ -23,6 +23,7 @@ public class AndroidBrowserStackSampleTests {
         // Set your access credentials
         caps.setCapability("browserstack.user", "bot_l05D9g");
         caps.setCapability("browserstack.key", "jy2xzhDKAtFVyrp8Lc7x");
+        caps.setCapability("browserstack.networkLogs", "true");
 
         // Set URL of the application under test
         caps.setCapability("app", "bs://c700ce60cf13ae8ed97705a55b8e022f13c5827c");
@@ -35,7 +36,6 @@ public class AndroidBrowserStackSampleTests {
         caps.setCapability("project", "First Java Project");
         caps.setCapability("build", "browserstack-build-1");
         caps.setCapability("name", "first_test");
-
 
         // Initialise the remote Webdriver using BrowserStack remote URL
         // and desired capabilities defined above
@@ -56,7 +56,6 @@ public class AndroidBrowserStackSampleTests {
         List<AndroidElement> allProductsName = driver.findElementsByClassName(
                 "android.widget.TextView");
         assert(allProductsName.size() > 0);
-
 
         // Invoke driver.quit() after the test is done to indicate that the test is completed.
         driver.quit();

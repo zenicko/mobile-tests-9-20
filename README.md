@@ -1,5 +1,4 @@
 <img src="readme-images/browserStack-logo.png" height="50" width="50"> <b>BrowserStack</b>
-
 <img src="readme-images/appium-logo.png" height="50" width="50"> <b>Appium</b>
 
 # I'm readme file and will tell about the project
@@ -24,12 +23,22 @@ ___
 ## Steps
 ___
 1. Created basic structure of the project: directories and files(.gitignore, build.gradle and readme.md). 
-2. Used the example of automation test from site BrowserStack class `AndroidBrowserStackSampleTests.java`. 
+2. Used (Appium) the example of automation test from site BrowserStack class `AndroidBrowserStackSampleTests.java`. 
+3. Used Selenide in the test. Refactored code class `AndroidBrowserStackSampleTests.java`. 
+Create classes `TestBase`,`AndroidTests` and `BrowserStackMobileDriver`.
 
 ## What's new?
 ___
-
-
+1. Selenide.java
+```
+   /**
+    * Open an empty browser (without opening any pages).
+    * E.g. useful for starting mobile applications in Appium.
+   */
+      public static void open() {
+            getSelenideDriver().open();
+      }
+```
 ## Resources
 ___
 
